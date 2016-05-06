@@ -3,221 +3,154 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <variable constant="0" name="TouchCount" sid="2165464445140896" static="0" type="number">0</variable>
-        <event-group description="" sid="8543899249418908" title="Controls">
-            <sub-events>
-                <event-block sid="3722024615947121">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="9714337922763881" type="Keyboard">
-                            <param id="0" name="Key">87 (W)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="9626726779707076" type="Player">
-                            <param id="0" name="Control">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="5660082383195668">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="7607259657542654" type="Keyboard">
-                            <param id="0" name="Key">68 (D)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="185960841501632" type="Player">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="5391434541605423">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="8949444437096523" type="Keyboard">
-                            <param id="0" name="Key">65 (A)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="2593330606285555" type="Player">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9516625843088334">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="7375668014171451" type="Keyboard">
-                            <param id="0" name="Key">83 (S)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="3630899563963892" type="Player">
-                            <param id="0" name="Animation">&quot;crouch&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="8250281123769109" type="System">
-                            <param id="0" name="Variable">TouchCount</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="3953139699762995">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="1286787967362266" type="Keyboard">
-                                    <param id="0" name="Key">83 (S)</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="5478114523139831" type="System">
-                                    <param id="0" name="Variable">TouchCount</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="12" name="Fall through" sid="8325184286065947" type="Player" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="5912484953096377">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="1152277101324717" type="Keyboard">
-                            <param id="0" name="Key">39 (Right arrow)</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Key is down" sid="7640408565869328" type="Keyboard">
-                            <param id="0" name="Key">38 (Up arrow)</param>
-                        </condition>
-                        <condition id="-6" name="Every X seconds" sid="9073943318511278" type="System">
-                            <param id="0" name="Interval (seconds)">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="6874041974373482" type="Player">
-                            <param id="0" name="Object">Sprite</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6349691536533856">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="2318175832978489" type="Keyboard">
-                            <param id="0" name="Key">38 (Up arrow)</param>
-                        </condition>
-                        <condition id="-6" name="Every X seconds" sid="7652344738328583" type="System">
-                            <param id="0" name="Interval (seconds)">0.15</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Key is down" sid="3765735413892089" type="Keyboard">
-                            <param id="0" name="Key">39 (Right arrow)</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Key is down" sid="9042809077923223" type="Keyboard">
-                            <param id="0" name="Key">37 (Left arrow)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="6986474098377407" type="Player">
-                            <param id="0" name="Object">Sprite</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="Image point">3</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="6548246473896074" type="Sprite">
-                            <param id="0" name="Angle">270</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6796408020992562">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="7051297776674879" type="Keyboard">
-                            <param id="0" name="Key">37 (Left arrow)</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Key is down" sid="9654858487135077" type="Keyboard">
-                            <param id="0" name="Key">38 (Up arrow)</param>
-                        </condition>
-                        <condition id="-6" name="Every X seconds" sid="7941615760993875" type="System">
-                            <param id="0" name="Interval (seconds)">0.15</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="2487903336745546" type="Player">
-                            <param id="0" name="Object">Sprite</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="Image point">2</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="4235233027378568" type="Sprite">
-                            <param id="0" name="Angle">180</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6246801485212018">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="3315525468250631" type="Keyboard">
-                            <param id="0" name="Key">39 (Right arrow)</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="2933307141093282" type="Keyboard">
-                            <param id="0" name="Key">38 (Up arrow)</param>
-                        </condition>
-                        <condition id="-6" name="Every X seconds" sid="9931863370161675" type="System">
-                            <param id="0" name="Interval (seconds)">0.15</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="4050011672504268" type="Player">
-                            <param id="0" name="Object">Sprite</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="Image point">4</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="4252754680715005" type="Sprite">
-                            <param id="0" name="Angle">315</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8694023722623692">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="7553671186043675" type="Keyboard">
-                            <param id="0" name="Key">37 (Left arrow)</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="1303069370713347" type="Keyboard">
-                            <param id="0" name="Key">38 (Up arrow)</param>
-                        </condition>
-                        <condition id="-6" name="Every X seconds" sid="3599705850305781" type="System">
-                            <param id="0" name="Interval (seconds)">0.15</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="1565567994998854" type="Player">
-                            <param id="0" name="Object">Sprite</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="Image point">5</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="6611728008072334" type="Sprite">
-                            <param id="0" name="Angle">225</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-block sid="605171885630043">
+        <event-block sid="3722024615947121">
             <conditions>
-                <condition id="-6" name="Every X seconds" sid="5362341470442911" type="System">
-                    <param id="0" name="Interval (seconds)">0.5</param>
+                <condition id="2" name="Key is down" sid="9714337922763881" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="8380109164119291" type="System">
-                    <param id="0" name="Variable">TouchCount</param>
-                    <param id="1" name="Value">0</param>
+                <action behavior="Platform" id="7" name="Simulate control" sid="9626726779707076" type="Player">
+                    <param id="0" name="Control">2</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="5335361823684886">
+        <event-block sid="5660082383195668">
             <conditions>
-                <condition id="-1" name="Compare X" sid="6401544058592244" type="Player2">
-                    <param id="0" name="Comparison">5</param>
-                    <param id="1" name="X co-ordinate">player.X+300</param>
+                <condition id="2" name="Key is down" sid="7607259657542654" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
                 </condition>
-                <condition id="-1" name="Every tick" sid="2653224869029079" type="System" />
             </conditions>
             <actions>
-                <action id="-23" name="Move at angle" sid="9195323730805067" type="Player2">
+                <action behavior="Platform" id="7" name="Simulate control" sid="185960841501632" type="Player">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5391434541605423">
+            <conditions>
+                <condition id="2" name="Key is down" sid="8949444437096523" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="2593330606285555" type="Player">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5912484953096377">
+            <conditions>
+                <condition id="2" name="Key is down" sid="1152277101324717" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+                <condition id="2" inverted="1" name="Key is down" sid="7640408565869328" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="9073943318511278" type="System">
+                    <param id="0" name="Interval (seconds)">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="6874041974373482" type="Player">
+                    <param id="0" name="Object">Sprite</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6349691536533856">
+            <conditions>
+                <condition id="2" name="Key is down" sid="2318175832978489" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="7652344738328583" type="System">
+                    <param id="0" name="Interval (seconds)">0.15</param>
+                </condition>
+                <condition id="2" inverted="1" name="Key is down" sid="3765735413892089" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+                <condition id="2" inverted="1" name="Key is down" sid="9042809077923223" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="6986474098377407" type="Player">
+                    <param id="0" name="Object">Sprite</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">3</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="6548246473896074" type="Sprite">
+                    <param id="0" name="Angle">270</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6796408020992562">
+            <conditions>
+                <condition id="2" name="Key is down" sid="7051297776674879" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="2" inverted="1" name="Key is down" sid="9654858487135077" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="7941615760993875" type="System">
+                    <param id="0" name="Interval (seconds)">0.15</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="2487903336745546" type="Player">
+                    <param id="0" name="Object">Sprite</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">2</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="4235233027378568" type="Sprite">
                     <param id="0" name="Angle">180</param>
-                    <param id="1" name="Distance">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6246801485212018">
+            <conditions>
+                <condition id="2" name="Key is down" sid="3315525468250631" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="2933307141093282" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="9931863370161675" type="System">
+                    <param id="0" name="Interval (seconds)">0.15</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="4050011672504268" type="Player">
+                    <param id="0" name="Object">Sprite</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">4</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="4252754680715005" type="Sprite">
+                    <param id="0" name="Angle">315</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8694023722623692">
+            <conditions>
+                <condition id="2" name="Key is down" sid="7553671186043675" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="1303069370713347" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="3599705850305781" type="System">
+                    <param id="0" name="Interval (seconds)">0.15</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="1565567994998854" type="Player">
+                    <param id="0" name="Object">Sprite</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">5</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="6611728008072334" type="Sprite">
+                    <param id="0" name="Angle">225</param>
                 </action>
             </actions>
         </event-block>
